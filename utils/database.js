@@ -13,11 +13,11 @@ export const connectToDB = async () => {
   try {
     await mongoose.connect('mongodb+srv://suryathangaraj95:suryathangaraj95@cluster0.arfb5r7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
       dbName: "share_prompt",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useUnifiedTopology:true,
-       useNewUrlParser: true,
-            useCreateIndex: true
+      //useNewUrlParser: true,
+      //useUnifiedTopology: true,
+      //useUnifiedTopology:true,
+      // useNewUrlParser: true,
+       //     useCreateIndex: true
      
     })
 
