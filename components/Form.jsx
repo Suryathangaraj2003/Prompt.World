@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import {Suspense} from "react";
 
 const Form = ({type,post,setPost,submitting,handleSubmit}) => {
   return (
@@ -11,6 +12,7 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
         {type} and share amazing prompts with the world, and let your
         imagination run wild with any AI-powered platform
       </p>
+      <Suspense fallback={<>Loading...</>}>
 
       <form
         onSubmit={handleSubmit}
@@ -63,6 +65,7 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
         </div>
         
         </form>
+        </Suspense>
         </section>
 
   )
