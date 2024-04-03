@@ -1,4 +1,6 @@
 import PromptCard from "./PromptCard";
+import {Suspense} from "react";
+
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
   return (
@@ -10,12 +12,15 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
 
       <div className='mt-10 prompt_layout'>
         {data.map((post) => (
+          <Suspense fallback={<>Loading...</>}>
           <PromptCard
             key={post._id}
             post={post}
             handleEdit={() => handleEdit && handleEdit(post)}
             handleDelete={() => handleDelete && handleDelete(post)}
+            
           />
+          </Suspense>
         ))}
       </div>
      
