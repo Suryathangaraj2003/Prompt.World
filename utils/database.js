@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 let isConnected = false; // track the connection
 
@@ -15,6 +16,9 @@ export const connectToDB = async () => {
       dbName: "share_prompt",
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useUnifiedTopology:true,
+       useNewUrlParser: true,
+            useCreateIndex: true
      
     })
 
